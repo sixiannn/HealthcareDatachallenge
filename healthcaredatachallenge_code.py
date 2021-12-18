@@ -304,6 +304,8 @@ z = pd.DataFrame({'foreigner': resident_test.Foreigner, 'singaporean': resident_
 z = z.melt(var_name="groups", value_name='values')
 z.dropna(inplace=True)
 sp.posthoc_dscf(z, val_col='groups', group_col='groups')
+
+
 # Model selection using LazyRegressor
 
 from sklearn.model_selection import train_test_split
