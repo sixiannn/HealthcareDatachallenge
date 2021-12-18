@@ -189,7 +189,7 @@ clean_df['age'] = clean_df['date_of_birth'].apply(pd.to_datetime).apply(calculat
 clean_df.drop('date_of_birth', axis=1, inplace=True)
 
 
-# Check distribution of data using dataprep
+# Check distribution of data
 summary_table = clinical_data_joined.describe()
 summary_table.to_csv("c:/users/sixia/downloads/HealthcareDataChalenge/summary_table.csv")
 cat_var = clinical_data_joined.loc[:,clinical_data_joined.columns[clinical_data_joined.columns.str.contains('medica|symptom')]].astype('category')
